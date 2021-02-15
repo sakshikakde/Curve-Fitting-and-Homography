@@ -1,6 +1,6 @@
 ## The file structure is a as follows:
 
-sakshi_hw1
+sakshi_hw1       
 -----Code -- all .py and .ipynb files       
 -----Data -- video files     
 -----graphs -- all plotted graphs are saved here      
