@@ -245,11 +245,12 @@ def main():
 
     Parser = argparse.ArgumentParser()
     Parser.add_argument('--BasePath', default='/home/sakshi/courses/ENPM673/sakshi_hw1/', help='Base path of project1, Default:/home/sakshi/courses/ENPM673/sakshi_hw1/')
-    Parser.add_argument('--VideoFilePath', default='Data/Ball_travel_2_updated.mp4', help='MP4 file name, Default:Ball_travel_2_updated.mp4')
+    Parser.add_argument('--VideoFilePath', default='/home/sakshi/courses/ENPM673/sakshi_hw1/Data/Ball_travel_2_updated.mp4', help='MP4 file name, Default:Ball_travel_2_updated.mp4')
     Parser.add_argument('--SaveFolderName', default='graphs/video2', help='Folder to save graphs, Default:Video1')
     Args = Parser.parse_args()
     BasePath = Args.BasePath
     VideoFilePath = Args.VideoFilePath
+    print(VideoFilePath)
     SaveFolderName = Args.SaveFolderName
     #BasePath = '/home/sakshi/courses/ENPM673/sakshi_hw1/'
     base_folder = BasePath
