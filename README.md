@@ -58,5 +58,9 @@ of outlier rejection technique for each case.
 ![alt test](https://github.com/sakshikakde/Curve-Fitting-and-Homography/blob/main/graphs/video2/RANSACcurve.png)
 
 
-### Part 2 -
-python3 Homography.py 
+# Problem 2
+Mathematically compute Homograpjhy matrix for given points.
+## Running the code
+- Change the directory to the root folder
+- Run the following command:
+``` python3 Homography.py 
