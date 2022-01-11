@@ -225,8 +225,8 @@ def main():
 
     Parser = argparse.ArgumentParser()
     Parser.add_argument('--BasePath', default='./', help='Base path of project1, Default:./')
-    Parser.add_argument('--VideoFilePath', default='./Data/video1.mp4', help='MP4 file name, Default:video1.mp4')
-    Parser.add_argument('--SaveFolderName', default='graphs/video1', help='Folder to save graphs, Default:video1')
+    Parser.add_argument('--VideoFilePath', default='./Data/video2.mp4', help='MP4 file name, Default:video1.mp4')
+    Parser.add_argument('--SaveFolderName', default='graphs/video2', help='Folder to save graphs, Default:video1')
     Args = Parser.parse_args()
     BasePath = Args.BasePath
     VideoFilePath = Args.VideoFilePath
