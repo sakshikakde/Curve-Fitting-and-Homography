@@ -1,4 +1,5 @@
-# File structure
+# Curve Fitting and Homography
+## File structure
     .
     ├── Code
     |  ├── CurveFitting.py
@@ -12,7 +13,7 @@
     |  ├── Video2
     |  |  ├── .png files
     
-# Problem 1
+## Problem 1
 A ball is thrown against a white background and a camera sensor is used to track its
 trajectory. We have a near perfect sensor tracking the ball in video1 and the second sensor is
 faulty and tracks the ball as shown in video2. Clearly, there is no noise added to the first video
@@ -24,41 +25,41 @@ in each case. You have to plot the data and your best fit curve for each case.
 of outlier rejection technique for each case.
 
 
-## Running the code
+### Running the code
 - Change the directory to the root folder
 - Run the following command:      
 ``` 
 python3 CurveFitting.py --BasePath='./' --VideoFilePath='./Data/Ball_travel_10fps.mp4' --SaveFolderName='graphs/video1' 
 ```
-## Parameters
+### Parameters
 - BasePath - This is the base folder path
 - VideoFilePath - By default, the path is set as ./Data/Ball_travel_2_updated.mp4
 - SaveFolderName - the path to folder where all the plots will be saved. The folder must be inside the BasePath
-## Results
-### Video1
-#### Data points
+### Results
+#### Video1
+##### Data points
 ![alt test](https://github.com/sakshikakde/Curve-Fitting-and-Homography/blob/main/graphs/video1/points.png)
-#### Least Square Method
+##### Least Square Method
 ![alt test](https://github.com/sakshikakde/Curve-Fitting-and-Homography/blob/main/graphs/video1/LScurve.png)
-#### Total Least Square Method
+##### Total Least Square Method
 ![alt test](https://github.com/sakshikakde/Curve-Fitting-and-Homography/blob/main/graphs/video1/TLScurve.png)
-#### RANSAC
+##### RANSAC
 ![alt test](https://github.com/sakshikakde/Curve-Fitting-and-Homography/blob/main/graphs/video1/RANSACcurve.png)
 
-### Video2
-#### Data points
+#### Video2
+##### Data points
 ![alt test](https://github.com/sakshikakde/Curve-Fitting-and-Homography/blob/main/graphs/video2/points.png)
-#### Least Square Method
+##### Least Square Method
 ![alt test](https://github.com/sakshikakde/Curve-Fitting-and-Homography/blob/main/graphs/video2/LScurve.png)
-#### Total Least Square Method
+##### Total Least Square Method
 ![alt test](https://github.com/sakshikakde/Curve-Fitting-and-Homography/blob/main/graphs/video2/TLScurve.png)
-#### RANSAC
+##### RANSAC
 ![alt test](https://github.com/sakshikakde/Curve-Fitting-and-Homography/blob/main/graphs/video2/RANSACcurve.png)
 
 
-# Problem 2
+## Problem 2
 Mathematically compute Homograpjhy matrix for given points.
-## Running the code
+### Running the code
 - Change the directory to the root folder
 - Run the following command:     
 ```
