@@ -1,12 +1,7 @@
-# To add a new cell, type '# %%'
-# To add a new markdown cell, type '# %% [markdown]'
-# %%
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 
-
-# %%
 def computeSVD(mat):   
     m, n = mat.shape
 
@@ -52,7 +47,7 @@ def computeSVD(mat):
     
 
 
-# %%
+
 def testSVD(A):
     mat = A
     #print("Original mat = ", mat)
@@ -61,7 +56,7 @@ def testSVD(A):
     print("Restoring matrix, ", np.dot(u, np.dot(e,v.transpose())))
 
 
-# %%
+
 def computeHomography(set1, set2):
 
     if (len(set1) < 4) or (len(set2) < 4):
@@ -96,7 +91,7 @@ def computeHomography(set1, set2):
     return H
 
 
-# %%
+
 def main():
     print("Solving question 2 ...")
     set1 = np.array([[5, 5], [150, 5], [150, 150], [5, 150]])
@@ -105,20 +100,10 @@ def main():
     computeHomography(set1, set2)
 
 
-# %%
 if __name__ == '__main__':
     main()
 
 
-# %%
-
-
-
-# %%
-
-
-
-# %%
 
 
 

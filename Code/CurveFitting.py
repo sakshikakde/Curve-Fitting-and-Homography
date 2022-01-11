@@ -1,20 +1,15 @@
-# To add a new cell, type '# %%'
-# To add a new markdown cell, type '# %% [markdown]'
-# %%
+import gi
+gi.require_version('Gtk', '2.0')
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 import argparse
 
-
-# %%
 def getBinaryImage(img):
     grayImage = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     ( _ , bin_image) = cv2.threshold(grayImage, 127, 255, cv2.THRESH_BINARY)
     return bin_image
 
-
-# %%
 def extractFeatures(img):
     indices = np.where(img == 0)
     x = indices[0]
@@ -26,8 +21,6 @@ def extractFeatures(img):
     co_ordinate = (co_ordinate_min + co_ordinate_max) / 2
     return co_ordinate
 
-
-# %%
 def extractMaxPoints(img):
     indices = np.where(img == 0)
     x = indices[0]
@@ -37,7 +30,6 @@ def extractMaxPoints(img):
     return co_ordinate_max
 
 
-# %%
 def extractMinPoints(img):
     indices = np.where(img == 0)
     x = indices[0]
@@ -47,7 +39,6 @@ def extractMinPoints(img):
     return co_ordinate_min
 
 
-# %%
 def plotGraph(array, name):
     print("Plotting graph")
     x = array[:,0]
@@ -58,7 +49,6 @@ def plotGraph(array, name):
     plt.savefig(name)
 
 
-# %%
 def convertImg2Cartesian(points_image, image_size):
     print("converting...")
     x_i = points_image[:, 0]
@@ -73,7 +63,6 @@ def convertImg2Cartesian(points_image, image_size):
     return points_cartesian
 
 
-# %%
 def fitCurveWithLeastSquare(points):
     x = points[:,0]
     y = points[:,1]
@@ -95,9 +84,6 @@ def fitCurveWithLeastSquare(points):
     return A
 
     
-
-
-# %%
 def fitCurveWithTotalLeastSquare(points):
 
     x = points[:,0]
@@ -126,8 +112,6 @@ def fitCurveWithTotalLeastSquare(points):
 
     return coef   
 
-
-# %%
 def fitCurveWithRansac(points, outliers, accuracy, thresh):
     x = points[:,0]
     y = points[:,1]
@@ -180,7 +164,6 @@ def fitCurveWithRansac(points, outliers, accuracy, thresh):
     return best_coef, chosen_points 
 
 
-# %%
 def calculateError(points, coef):
     x = points[:,0]
     y = points[:,1]
@@ -193,7 +176,6 @@ def calculateError(points, coef):
     return E
 
 
-# %%
 def plotLSCurve(coef, points, name):
     x = points[:, 0]
     y = points[:, 1]
@@ -217,7 +199,6 @@ def plotLSCurve(coef, points, name):
 
 
 
-# %%
 def plotTLSCurve(coef, points, name):
     a, b, c, d = coef
     x = points[:, 0]
@@ -240,25 +221,21 @@ def plotTLSCurve(coef, points, name):
     plt.savefig(name)
 
 
-# %%
 def main():
 
     Parser = argparse.ArgumentParser()
-    Parser.add_argument('--BasePath', default='/home/sakshi/courses/ENPM673/sakshi_hw1/', help='Base path of project1, Default:/home/sakshi/courses/ENPM673/sakshi_hw1/')
-    Parser.add_argument('--VideoFilePath', default='/home/sakshi/courses/ENPM673/sakshi_hw1/Data/Ball_travel_2_updated.mp4', help='MP4 file name, Default:Ball_travel_2_updated.mp4')
-    Parser.add_argument('--SaveFolderName', default='graphs/video2', help='Folder to save graphs, Default:Video1')
+    Parser.add_argument('--BasePath', default='./', help='Base path of project1, Default:./')
+    Parser.add_argument('--VideoFilePath', default='./Data/video1.mp4', help='MP4 file name, Default:video1.mp4')
+    Parser.add_argument('--SaveFolderName', default='graphs/video1', help='Folder to save graphs, Default:video1')
     Args = Parser.parse_args()
     BasePath = Args.BasePath
     VideoFilePath = Args.VideoFilePath
     print(VideoFilePath)
     SaveFolderName = Args.SaveFolderName
-    #BasePath = '/home/sakshi/courses/ENPM673/sakshi_hw1/'
     base_folder = BasePath
     video_file = VideoFilePath
 
     cap = cv2.VideoCapture(video_file)
-    # img = np.array([[1,2,3],[4,5,6],[7,8,9]])
-    # extractFeatures(img)
     co_ordinate_array = []
     image_size = []
 
@@ -307,13 +284,10 @@ def main():
     cap.release()
     cv2.destroyAllWindows()
 
-
-# %%
 if __name__ == '__main__':
     main()
 
 
-# %%
 
 
 
