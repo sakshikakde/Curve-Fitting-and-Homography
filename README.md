@@ -19,11 +19,7 @@ faulty and tracks the ball as shown in video2. Clearly, there is no noise added 
 whereas there is significant noise in video 2. Assuming that the trajectory of the ball follows
 the equation of a parabola
 - Use Standard Least Squares, TLS and RANSAC methods to fit curves to the given videos
-in each case. You have to plot the data and your best fit curve for each case. Submit
-your code along with the instructions to run it. (Hint: Read the video frame by frame
-using OpenCV’s inbuilt function. For each frame, filter the red channel for the ball and
-detect the topmost and bottom most colored pixel and store it as X and Y coordinates.
-Use this information to plot curves.) 
+in each case. You have to plot the data and your best fit curve for each case. 
 - Briefly explain all the steps of your solution and discuss which would be a better choice
 of outlier rejection technique for each case.
 
