@@ -30,7 +30,7 @@ of outlier rejection technique for each case.
 
 ## Running the code
 - Change the directory to the root folder
-- Run the following command:
+- Run the following command:       
 ``` python3 CurveFitting.py --BasePath='./' --VideoFilePath='./Data/Ball_travel_10fps.mp4' --SaveFolderName='graphs/video1' ```
 ## Parameters
 - BasePath - This is the base folder path
@@ -62,5 +62,5 @@ of outlier rejection technique for each case.
 Mathematically compute Homograpjhy matrix for given points.
 ## Running the code
 - Change the directory to the root folder
-- Run the following command:
-``` python3 Homography.py 
+- Run the following command:     
+``` python3 Homography.py ```
